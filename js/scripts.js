@@ -16,6 +16,12 @@ navButton.addEventListener("click", () => {
   }
 });
 
+document.addEventListener("click", function (event) {
+  if (!header.contains(event.target)) {
+    handleNav();
+  }
+})
+
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 834) {
     handleNav();
@@ -64,8 +70,11 @@ function handleParagraphs() {
 }
 
 let counter = 0;
+let isClicked = false;
 
 nextSlideButton.addEventListener("click", function () {
+  if (isClicked) return;
+
   counter += 1;
   slider.style.transform = `translateX(-${100 * counter}%)`;
   prevSlideButton.removeAttribute("disabled");
@@ -74,9 +83,16 @@ nextSlideButton.addEventListener("click", function () {
   if (counter === 2) {
     this.setAttribute("disabled", "");
   }
+
+  isClicked = true;
+  setTimeout(() => {
+    isClicked = false;
+  }, 1000);
 });
 
 prevSlideButton.addEventListener("click", function () {
+  if (isClicked) return;
+
   counter -= 1;
   slider.style.transform = `translateX(-${100 * counter}%)`;
   nextSlideButton.removeAttribute("disabled");
@@ -85,4 +101,9 @@ prevSlideButton.addEventListener("click", function () {
   if (counter === 0) {
     this.setAttribute("disabled", "");
   }
+
+  isClicked = true;
+  setTimeout(() => {
+    isClicked = false;
+  }, 1000);
 });

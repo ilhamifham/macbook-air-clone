@@ -144,9 +144,13 @@ header {
     opacity: 0;
     visibility: hidden;
     overflow: hidden;
+    transition: all 500ms ease-in-out;
 
     ul {
       padding: 1.3125rem 1rem 1rem;
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
 
       a {
         font-size: 0.875rem;
@@ -187,6 +191,7 @@ header {
     z-index: 1;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
   }
 
   &.nav-open {
@@ -199,10 +204,15 @@ header {
     }
 
     nav {
-      height: inherit;
+      height: 6.5625rem;
       opacity: inherit;
       visibility: inherit;
       overflow: inherit;
+
+      ul {
+        opacity: inherit;
+        transform: inherit;
+      }
     }
 
     +div {
@@ -410,6 +420,7 @@ header {
 /* ===== Section - Design ===== */
 .design {
   overflow-x: hidden;
+  padding-bottom: 5.9375rem;
 
   h2 {
     text-transform: uppercase;
@@ -613,6 +624,7 @@ header {
   }
 
   .sliding-container {
+    border-radius: variables.$radius-image;
     overflow: hidden;
     position: relative;
     left: 50%;
@@ -681,6 +693,8 @@ header {
 
 @media only screen and (min-width: 45.875rem) {
   .design {
+    padding-bottom: 8.4375rem;
+
     .heading-gradient-text {
       line-height: 1.0714285714;
       font-size: 3.5rem;
@@ -781,6 +795,8 @@ header {
 
 @media only screen and (min-width: 66.75rem) {
   .design {
+    padding-bottom: 8.75rem;
+
     .heading-gradient-text {
       line-height: 1.11;
       font-size: 4.5rem;
