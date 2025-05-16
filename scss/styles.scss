@@ -235,10 +235,14 @@ header {
       visibility: inherit;
       overflow: inherit;
       width: inherit;
+      transition: inherit;
 
       ul {
         padding: 0;
         display: flex;
+        transform: inherit;
+        opacity: inherit;
+        transition: inherit;
 
         a {
           font-size: 0.75rem;
