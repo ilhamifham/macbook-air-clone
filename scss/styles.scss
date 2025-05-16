@@ -131,6 +131,7 @@ header {
   button {
     height: 1.4985rem;
     width: 1.4985rem;
+    touch-action: manipulation;
 
     svg {
       margin-left: auto;
@@ -658,6 +659,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
+        touch-action: manipulation;
 
         &:disabled {
           opacity: 0.5;
