@@ -7,7 +7,7 @@ function handleNav() {
   main.removeAttribute("inert");
 }
 
-navButton.addEventListener("click", () => {
+navButton.addEventListener("click", function () {
   if (header.classList.contains("nav-open")) {
     handleNav();
   } else {
@@ -37,19 +37,19 @@ window.addEventListener("scroll", function () {
 const inputs = document.querySelectorAll(".color-picker input");
 const pictureGroups = [document.querySelectorAll(".gallery .picture-3"), document.querySelectorAll(".gallery .picture-4"), document.querySelectorAll(".gallery .picture-5")];
 
-inputs.forEach((input, index) => {
-  input.addEventListener("change", () => {
-    inputs.forEach((input) => input.removeAttribute("checked"));
+inputs.forEach(function (input, index) {
+  input.addEventListener("change", function () {
+    inputs.forEach(function (input) { input.removeAttribute("checked") });
 
     inputs[index].setAttribute("checked", "");
 
-    pictureGroups.forEach((group) => {
-      group.forEach((picture) => {
+    pictureGroups.forEach(function (group) {
+      group.forEach(function (picture) {
         picture.style.display = "none";
       });
     });
 
-    pictureGroups.forEach((group) => {
+    pictureGroups.forEach(function (group) {
       if (group[index]) {
         group[index].removeAttribute("style");
       }
@@ -63,7 +63,7 @@ const slider = document.querySelector(".design .slider");
 const paragraphs = document.querySelectorAll(".design .slide-images-text p");
 
 function handleParagraphs() {
-  paragraphs.forEach((paragraph) => {
+  paragraphs.forEach(function (paragraph) {
     paragraph.style.opacity = "0";
   });
   paragraphs[counter].style.opacity = "100%";
@@ -85,7 +85,7 @@ nextSlideButton.addEventListener("click", function () {
   }
 
   isClicked = true;
-  setTimeout(() => {
+  setTimeout(function () {
     isClicked = false;
   }, 1000);
 });
@@ -103,7 +103,7 @@ prevSlideButton.addEventListener("click", function () {
   }
 
   isClicked = true;
-  setTimeout(() => {
+  setTimeout(function () {
     isClicked = false;
   }, 1000);
 });
