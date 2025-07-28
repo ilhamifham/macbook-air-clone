@@ -77,10 +77,50 @@ button:disabled {
   border-radius: variables.$radius-image;
 }
 
+.page-h2 {
+  text-transform: uppercase;
+  letter-spacing: -0.016em;
+  font-size: 0.875rem;
+  line-height: 1.28577;
+}
+
+.page-sub-heading {
+  letter-spacing: 0;
+  margin-top: 0.375rem;
+  margin-left: -0.0625rem;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+.page-info {
+  letter-spacing: 0.011em;
+  font-size: 1.3125rem;
+  line-height: 1.19048;
+}
+
+.overflow-image {
+  box-sizing: content-box;
+  width: 35.75rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media only screen and (min-width: 45.875rem) {
   .content {
     padding: 0 1.3125rem;
     max-width: 45.875rem;
+  }
+
+  .page-sub-heading {
+    margin-top: 0.5rem;
+    margin-left: -0.125rem;
+    font-size: 3.5rem;
+    line-height: 1.07143;
+  }
+
+  .overflow-image {
+    width: 52.469rem;
   }
 }
 
@@ -94,6 +134,22 @@ button:disabled {
 @media only screen and (min-width: 66.75rem) {
   .content {
     max-width: 64rem;
+  }
+
+  .page-sub-heading {
+    margin-left: -0.1875rem;
+    font-size: 4.5rem;
+    line-height: 1.11;
+  }
+
+  .page-info {
+    letter-spacing: 0.009em;
+    font-size: 1.5rem;
+    line-height: 1.16667;
+  }
+
+  .overflow-image {
+    width: 89.25rem;
   }
 }
 
@@ -179,7 +235,7 @@ header {
     }
   }
 
-  +div {
+  + div {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -205,7 +261,7 @@ header {
     }
 
     nav {
-      height: 6.5625rem;
+      height: 3.75rem;
       opacity: inherit;
       visibility: inherit;
       overflow: inherit;
@@ -216,7 +272,7 @@ header {
       }
     }
 
-    +div {
+    + div {
       opacity: inherit;
       visibility: inherit;
     }
@@ -427,21 +483,6 @@ header {
   overflow-x: hidden;
   padding-bottom: 5.9375rem;
 
-  h2 {
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    line-height: 1.2857742857;
-    letter-spacing: -0.016em;
-  }
-
-  .heading-gradient-text {
-    line-height: 1.1;
-    letter-spacing: 0em;
-    font-size: 2.5rem;
-    margin-top: 0.375rem;
-    margin-left: -0.0625rem;
-  }
-
   .picture-1,
   .size,
   .container,
@@ -450,12 +491,7 @@ header {
   }
 
   .picture-1 {
-    width: 35.75rem;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 1rem;
-    box-sizing: content-box;
   }
 
   .info {
@@ -540,17 +576,17 @@ header {
             height: 1px;
             width: 1px;
 
-            &:checked+label span:first-child {
+            &:checked + label span:first-child {
               cursor: default;
               border-color: variables.$color-dodger-blue;
             }
 
-            &:checked+label span:last-child {
+            &:checked + label span:last-child {
               opacity: 1;
               visibility: visible;
             }
 
-            &:focus-visible+label span:first-child {
+            &:focus-visible + label span:first-child {
               outline: 2px solid variables.$color-dodger-blue;
               outline-offset: 2px;
             }
@@ -669,14 +705,14 @@ header {
           opacity: 0.5;
         }
 
-        &:first-child svg {
+        &#next svg {
           transform: rotateZ(-90deg) translateY(1px);
         }
 
-        &:last-child {
+        &#prev {
           order: -1;
-          margin-right: 1.25rem;
           margin-left: auto;
+          margin-right: 1.25rem;
 
           svg {
             transform: rotateZ(90deg) translateY(1px);
@@ -701,15 +737,7 @@ header {
   .design {
     padding-bottom: 8.4375rem;
 
-    .heading-gradient-text {
-      line-height: 1.0714285714;
-      font-size: 3.5rem;
-      margin-top: 0.5rem;
-      margin-left: -0.125rem;
-    }
-
     .picture-1 {
-      width: 52.469rem;
       padding-bottom: 0;
     }
 
@@ -803,16 +831,6 @@ header {
   .design {
     padding-bottom: 8.75rem;
 
-    .heading-gradient-text {
-      line-height: 1.11;
-      font-size: 4.5rem;
-      margin-left: -0.1875rem;
-    }
-
-    .picture-1 {
-      width: 89.25rem;
-    }
-
     .info {
       font-size: 1.5rem;
       line-height: 1.16667;
@@ -877,6 +895,135 @@ header {
 
     .slide-images-text {
       height: 1.5625rem;
+    }
+  }
+}
+
+/* ===== Section - Performance ===== */
+.performance {
+  overflow-x: hidden;
+  padding-bottom: 5.9375rem;
+
+  .picture-1 {
+    margin-top: 2.375rem;
+    padding: 1rem 1rem 0;
+  }
+
+  .badges {
+    margin: 4rem 0;
+  }
+
+  .m4-badge {
+    width: 4.625rem;
+    margin-bottom: 2rem;
+  }
+
+  .badge-content {
+    max-width: 10rem;
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .badge-caption {
+      font-size: 1.1875rem;
+      line-height: 1.21053;
+      letter-spacing: 0.012em;
+    }
+
+    .badge-value {
+      margin-top: -0.25rem;
+      margin-bottom: -0.3125rem;
+    }
+  }
+
+  .page-info:nth-of-type(2) {
+    margin: 1.625rem 0;
+  }
+}
+
+@media only screen and (min-width: 45.875rem) {
+  .performance {
+    padding-bottom: 8.4375rem;
+
+    .picture-1 {
+      padding-top: 0;
+    }
+
+    .m4-badge {
+      margin-bottom: 0;
+      margin-right: 2rem;
+      align-self: center;
+    }
+
+    .line {
+      width: 1px;
+      background-color: #75757a;
+      align-self: stretch;
+      margin-right: 2rem;
+    }
+
+    .badges {
+      display: flex;
+      margin: 2rem 0;
+    }
+
+    .badge-content {
+      margin-bottom: 0;
+      margin-right: 3rem;
+      max-width: 8rem;
+
+      &:nth-of-type(3) {
+        margin-right: 1rem;
+      }
+
+      .badge-caption {
+        font-size: 0.875rem;
+        line-height: 1.2857742857;
+      }
+    }
+
+    .page-info:nth-of-type(2) {
+      margin: 2.5rem 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 66.75rem) {
+  .performance {
+    padding-bottom: 8.75rem;
+
+    .picture-1 {
+      margin-top: 4rem;
+      padding-top: 1rem;
+    }
+
+    .m4-badge {
+      width: 6.375rem;
+      margin-right: 3rem;
+    }
+
+    .line {
+      margin-right: 3rem;
+    }
+
+    .badges {
+      margin: 3rem 0;
+    }
+
+    .badge-content {
+      max-width: 10rem;
+      margin-right: 5rem;
+
+      &:nth-of-type(3) {
+        margin-right: 2rem;
+      }
+
+      .badge-caption {
+        font-size: 1.1875rem;
+        line-height: 1.21053;
+      }
     }
   }
 }
