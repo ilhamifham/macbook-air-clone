@@ -77,13 +77,22 @@ inputs.forEach(function (input, index) {
 const nextSlideButton = document.querySelector("#next");
 const prevSlideButton = document.querySelector("#prev");
 const slider = document.querySelector(".design .slider");
+const slidingContainer = document.querySelector(".design .sliding-container");
 const paragraphs = document.querySelectorAll(".design .slide-images-text p");
 const imageCount = 3;
 
-let isPlaying = true;
+let isPlaying = false;
 let direction = 1;
 let counter = 0;
 let isClicked = false;
+
+const slideObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    isPlaying = entry.isIntersecting ? true : false;
+  });
+});
+
+slideObserver.observe(slidingContainer);
 
 function handleSlider() {
   slider.style.transform = `translateX(-${100 * counter}%)`;

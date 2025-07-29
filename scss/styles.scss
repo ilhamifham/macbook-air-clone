@@ -337,6 +337,7 @@ header {
 
 /* ===== Section - Welcome ===== */
 .welcome {
+  background: linear-gradient(180deg, #d4eaf6, #f9f9f9 75%, #fff);
   margin-top: 3rem;
   padding: 2.5rem 0 5.9375rem;
 
@@ -385,10 +386,7 @@ header {
       letter-spacing: -0.016em;
     }
 
-    .info {
-      font-size: 1.3125rem;
-      line-height: 1.1904761905;
-      letter-spacing: 0.011em;
+    .page-info {
       max-width: 23.4375rem;
       margin: 3.125rem auto 0;
     }
@@ -429,7 +427,7 @@ header {
         letter-spacing: -0.022em;
       }
 
-      .info {
+      .page-info {
         max-width: 36rem;
       }
     }
@@ -468,10 +466,7 @@ header {
         margin: 1.5rem 0;
       }
 
-      .info {
-        font-size: 1.5rem;
-        line-height: 1.1666666667;
-        letter-spacing: 0.009em;
+      .page-info {
         max-width: 51rem;
       }
     }
@@ -492,12 +487,6 @@ header {
 
   .picture-1 {
     padding: 1rem;
-  }
-
-  .info {
-    font-size: 1.3125rem;
-    line-height: 1.1904761905;
-    letter-spacing: 0.011em;
   }
 
   .size {
@@ -670,7 +659,7 @@ header {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    min-width: 20rem;
+    min-width: 18rem;
 
     .slider {
       transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -830,12 +819,6 @@ header {
 @media only screen and (min-width: 66.75rem) {
   .design {
     padding-bottom: 8.75rem;
-
-    .info {
-      font-size: 1.5rem;
-      line-height: 1.16667;
-      letter-spacing: 0.009em;
-    }
 
     .size .size-info {
       div {
