@@ -1,0 +1,136 @@
+.welcome {
+  background: linear-gradient(180deg, #d4eaf6, #f9f9f9 75%, #fff);
+  margin-top: 3rem;
+  padding: 2.5rem 0 5.9375rem;
+
+  h2 {
+    text-align: center;
+    font-size: 1.3125rem;
+    line-height: 1.1666666667;
+    letter-spacing: 0.009em;
+    margin-bottom: 0.5rem;
+  }
+
+  .heading-gradient {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    letter-spacing: 0em;
+  }
+
+  picture {
+    max-width: 18.969rem;
+    margin: 2.3125rem auto 2.8rem;
+  }
+
+  .description {
+    text-align: center;
+
+    .ai-gradient {
+      font-size: 1.3125rem;
+      line-height: 1.1904761905;
+      letter-spacing: 0.011em;
+    }
+
+    .button {
+      font-size: 1.0625rem;
+      line-height: 1.1764805882;
+      letter-spacing: -0.022em;
+      padding: 0.6875rem 1.3125rem;
+      display: inline-block;
+      margin: 1rem 0;
+    }
+
+    .price {
+      white-space: nowrap;
+      font-size: 0.875rem;
+      line-height: 1.2857742857;
+      letter-spacing: -0.016em;
+    }
+
+    .page-info {
+      max-width: 23.4375rem;
+      margin: 3.125rem auto 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 45.875rem) {
+  .welcome {
+    padding: 5.625rem 0 8.4375rem;
+
+    h2 {
+      font-size: 1.75rem;
+      line-height: 1.1428571429;
+      letter-spacing: 0.007em;
+    }
+
+    .heading-gradient {
+      font-size: 3.5rem;
+      line-height: 1.0714285714;
+      margin-top: 0.875rem;
+    }
+
+    picture {
+      max-width: 45.3125rem;
+      margin: 4.6875rem auto;
+    }
+
+    .description {
+      .ai-gradient {
+        font-size: 1.75rem;
+        line-height: 1.1428571429;
+        letter-spacing: 0.007em;
+      }
+
+      .price {
+        font-size: 1.0625rem;
+        line-height: 1.2353641176;
+        letter-spacing: -0.022em;
+      }
+
+      .page-info {
+        max-width: 36rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 66.75rem) {
+  .welcome {
+    margin-top: 3.25rem;
+    padding: 3.25rem 0 8.75rem;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.125;
+      letter-spacing: 0.004em;
+    }
+
+    .heading-gradient {
+      font-size: 3.5rem;
+      margin-top: 0.8125rem;
+    }
+
+    picture {
+      max-width: 51.625rem;
+      margin: 2.375rem auto 2.6rem;
+    }
+
+    .description {
+      .ai-gradient {
+        font-size: 2rem;
+        line-height: 1.125;
+        letter-spacing: 0.004em;
+      }
+
+      .button {
+        margin: 1.5rem 0;
+      }
+
+      .page-info {
+        max-width: 51rem;
+      }
+    }
+  }
+}

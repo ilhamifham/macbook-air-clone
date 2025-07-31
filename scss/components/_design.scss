@@ -1,0 +1,409 @@
+@use "../variables";
+
+.design {
+  overflow-x: hidden;
+  padding-bottom: 5.9375rem;
+
+  .picture-1,
+  .size,
+  .container,
+  .sliding-container {
+    margin: 3rem 0 2rem;
+  }
+
+  .picture-1 {
+    padding: 1rem;
+  }
+
+  .size {
+    position: relative;
+    max-width: 23.375rem;
+    padding: 1rem 0;
+
+    .size-info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+          text-align: right;
+          margin-right: 2.5rem;
+        }
+
+        &:last-child {
+          margin-left: 2.5rem;
+        }
+
+        span {
+          &:first-child {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            letter-spacing: 0em;
+          }
+
+          &:last-child {
+            font-size: 1.1875rem;
+            line-height: 1.21053;
+            letter-spacing: 0.012em;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    .gallery {
+      &:first-child {
+        margin-bottom: 1rem;
+
+        .picture-3 {
+          padding: 4rem 1rem;
+          margin-bottom: 1rem;
+
+          img {
+            width: 15.75rem;
+            margin: 0 auto;
+          }
+        }
+
+        .color-picker {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem 0 2.25rem;
+
+          input {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0px 0px 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+
+            &:checked + label span:first-child {
+              cursor: default;
+              border-color: variables.$color-dodger-blue;
+            }
+
+            &:checked + label span:last-child {
+              opacity: 1;
+              visibility: visible;
+            }
+
+            &:focus-visible + label span:first-child {
+              outline: 2px solid variables.$color-dodger-blue;
+              outline-offset: 2px;
+            }
+          }
+
+          label {
+            display: block;
+            padding: 0 1rem;
+            position: relative;
+
+            &[for="skyblue"] span:first-child div {
+              background-color: #c8d8e0;
+            }
+
+            &[for="silver"] span:first-child div {
+              background-color: #e3e4e6;
+            }
+
+            &[for="starlight"] span:first-child div {
+              background-color: #f0e4d3;
+            }
+
+            &[for="midnight"] span:first-child div {
+              background-color: #2e3642;
+            }
+
+            span {
+              &:first-child {
+                padding: 0.1875rem;
+                display: block;
+                border-radius: 100px;
+                border: 2px solid transparent;
+                cursor: pointer;
+
+                div {
+                  width: 1.75rem;
+                  height: 1.75rem;
+                  border-radius: 100px;
+                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+                }
+              }
+
+              &:last-child {
+                font-size: 0.75rem;
+                line-height: 1.3333733333;
+                letter-spacing: -0.01em;
+                white-space: nowrap;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 0.375rem;
+                opacity: 0;
+                visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .picture-4 {
+          overflow: hidden;
+        }
+
+        div:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .info-2 {
+    font-size: 1.1875rem;
+    line-height: 1.21053;
+    letter-spacing: 0.012em;
+  }
+
+  .sliding-container {
+    border-radius: variables.$radius-image;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 18rem;
+
+    .slider {
+      transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+      display: flex;
+
+      picture {
+        flex: none;
+      }
+    }
+
+    .slider-buttons {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      padding: 1rem;
+      display: flex;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+
+      button {
+        background-color: variables.$color-white;
+        color: variables.$color-black;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+
+        &:disabled {
+          opacity: 0.5;
+        }
+
+        &#next svg {
+          transform: rotateZ(-90deg) translateY(1px);
+        }
+
+        &#prev {
+          order: -1;
+          margin-left: auto;
+          margin-right: 1.25rem;
+
+          svg {
+            transform: rotateZ(90deg) translateY(1px);
+          }
+        }
+      }
+    }
+  }
+
+  .slide-images-text {
+    position: relative;
+    height: 4.3125rem;
+
+    p {
+      position: absolute;
+      transition: opacity 500ms ease-in-out;
+    }
+  }
+}
+
+@media only screen and (min-width: 45.875rem) {
+  .design {
+    padding-bottom: 8.4375rem;
+
+    .picture-1 {
+      padding-bottom: 0;
+    }
+
+    .size {
+      max-width: inherit;
+
+      .size-info div {
+        &:first-child {
+          margin-right: 4.5rem;
+        }
+
+        &:last-child {
+          margin-left: 4.5rem;
+        }
+
+        span {
+          &:first-child {
+            font-size: 3.5rem;
+            line-height: 1.0714285714;
+          }
+
+          &:last-child {
+            font-size: 1.75rem;
+            line-height: 1.1428571429;
+            letter-spacing: 0.007em;
+          }
+        }
+      }
+    }
+
+    .container {
+      display: flex;
+
+      .gallery {
+        &:first-child {
+          width: 100%;
+          margin-left: 1rem;
+          margin-bottom: 0;
+
+          .picture-3 img {
+            width: 11.25rem;
+          }
+        }
+
+        &:last-child {
+          order: -1;
+          display: flex;
+          flex-direction: column;
+
+          div {
+            height: 100%;
+
+            &:last-child {
+              display: block;
+              order: -1;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .picture-4 {
+            height: 100%;
+            width: 21.25rem;
+            display: flex;
+
+            img {
+              margin-top: auto;
+            }
+          }
+
+          .picture-5 {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 13.375rem;
+            }
+          }
+        }
+      }
+    }
+
+    .slide-images-text {
+      height: 2.875rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 66.75rem) {
+  .design {
+    padding-bottom: 8.75rem;
+
+    .size .size-info {
+      div {
+        &:first-child {
+          margin-right: 5.9325rem;
+        }
+
+        &:last-child {
+          margin-left: 5.9325rem;
+        }
+
+        span {
+          &:first-child {
+            font-size: 4.5rem;
+            line-height: 1.0555555556;
+          }
+
+          &:last-child {
+            font-size: 2rem;
+            line-height: 1.125;
+            letter-spacing: 0.004em;
+          }
+        }
+      }
+    }
+
+    .info-2 {
+      font-size: 1.3125rem;
+      line-height: 1.1904761905;
+      letter-spacing: 0.011em;
+    }
+
+    .container {
+      .gallery {
+        &:first-child {
+          .picture-3 img {
+            width: 15.75rem;
+          }
+
+          .color-picker label span:first-child div {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        &:last-child {
+          .picture-4 {
+            width: 30rem;
+          }
+
+          .picture-5 img {
+            width: 18.875rem;
+          }
+        }
+      }
+    }
+
+    .slide-images-text {
+      height: 1.5625rem;
+    }
+  }
+}
