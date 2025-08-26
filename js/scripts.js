@@ -44,11 +44,7 @@ window.addEventListener("scroll", function () {
 
 // PICTURE GROUPS
 const inputs = document.querySelectorAll(".color-picker input");
-const pictureGroups = [
-  document.querySelectorAll(".gallery .picture-3"),
-  document.querySelectorAll(".gallery .picture-4"),
-  document.querySelectorAll(".gallery .picture-5"),
-];
+const pictureGroups = [document.querySelectorAll(".gallery .picture-3"), document.querySelectorAll(".gallery .picture-4"), document.querySelectorAll(".gallery .picture-5")];
 
 inputs.forEach(function (input, index) {
   input.addEventListener("change", function () {
@@ -136,12 +132,12 @@ function playAutoSlide() {
   }
 }
 
+setInterval(playAutoSlide, 3000);
+
 function pauseAutoSlide() {
   isPlaying = false;
   clearInterval(playAutoSlide);
 }
-
-setInterval(playAutoSlide, 3000);
 
 nextSlideButton.addEventListener("click", function () {
   pauseAutoSlide();

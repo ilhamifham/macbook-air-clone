@@ -70,10 +70,17 @@
     .badge-content {
       margin-bottom: 0;
       margin-right: 3rem;
-      max-width: 8rem;
 
       &:nth-of-type(3) {
-        margin-right: 1rem;
+        width: 7.3125rem;
+      }
+
+      &:nth-of-type(4) {
+        width: 5.1875rem;
+      }
+
+      &:nth-of-type(5) {
+        width: 8.75rem;
       }
 
       .badge-caption {
@@ -107,11 +114,18 @@
     }
 
     .badge-content {
-      max-width: 10rem;
       margin-right: 5rem;
 
       &:nth-of-type(3) {
-        margin-right: 2rem;
+        width: 10rem;
+      }
+
+      &:nth-of-type(4) {
+        width: 7rem;
+      }
+
+      &:nth-of-type(5) {
+        width: 11.125rem;
       }
 
       .badge-caption {

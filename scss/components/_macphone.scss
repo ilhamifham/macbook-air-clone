@@ -1,6 +1,8 @@
 @use "../variables";
 
 .macphone {
+  padding-bottom: 5.9375rem;
+
   .overlay-content {
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -118,7 +120,7 @@
     }
   }
 
-  .sf-pro-display-semibold {
+  .section-info {
     letter-spacing: 0.012em;
     font-size: 1.1875rem;
     line-height: 1.21053;
@@ -127,6 +129,8 @@
 
 @media only screen and (min-width: 45.875rem) {
   .macphone {
+    padding-bottom: 8.4375rem;
+
     .overlay-content {
       picture {
         padding-right: 2.25rem;
@@ -158,11 +162,13 @@
 
 @media only screen and (min-width: 66.75rem) {
   .macphone {
+    padding-bottom: 8.75rem;
+
     figcaption {
       font-size: 1.1875rem;
     }
 
-    .sf-pro-display-semibold {
+    .section-info {
       letter-spacing: 0.011em;
       font-size: 1.3125rem;
       line-height: 1.19048;
