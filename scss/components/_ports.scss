@@ -1,0 +1,25 @@
+@use "../variables";
+
+.ports {
+  padding-bottom: 5.9375rem;
+  overflow-x: hidden;
+
+  .overflow-image {
+    margin: 3rem 0 2rem;
+    border-radius: variables.$radius-image;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 45.875rem) {
+  .ports {
+    padding-bottom: 8.4375rem;
+  }
+}
+
+@media only screen and (min-width: 66.75rem) {
+  .ports {
+    padding-bottom: 8.75rem;
+  }
+}

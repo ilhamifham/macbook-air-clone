@@ -119,11 +119,17 @@
       }
     }
   }
+}
 
-  .section-info {
-    letter-spacing: 0.012em;
-    font-size: 1.1875rem;
-    line-height: 1.21053;
+.display .overlay-content {
+  picture {
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+
+  .overlay-info figure img {
+    width: 53px;
+    height: 53px;
   }
 }
 
@@ -166,12 +172,6 @@
 
     figcaption {
       font-size: 1.1875rem;
-    }
-
-    .section-info {
-      letter-spacing: 0.011em;
-      font-size: 1.3125rem;
-      line-height: 1.19048;
     }
   }
 }
