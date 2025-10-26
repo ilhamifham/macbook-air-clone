@@ -27,6 +27,15 @@ body {
   letter-spacing: -0.022em;
 }
 
+footer {
+  font-size: 0.75rem;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  background-color: rgb(245, 245, 247);
+  color: #0000008f;
+}
+
 /* ===== Utilities ===== */
 .sf-pro-display-semibold {
   font-family: variables.$font-SF-Pro-Display-Semibold;

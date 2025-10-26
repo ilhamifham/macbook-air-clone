@@ -44,7 +44,11 @@ window.addEventListener("scroll", function () {
 
 // PICTURE GROUPS
 const inputs = document.querySelectorAll(".color-picker input");
-const pictureGroups = [document.querySelectorAll(".gallery .picture-3"), document.querySelectorAll(".gallery .picture-4"), document.querySelectorAll(".gallery .picture-5")];
+const pictureGroups = [
+  document.querySelectorAll(".gallery .picture-3"),
+  document.querySelectorAll(".gallery .picture-4"),
+  document.querySelectorAll(".gallery .picture-5"),
+];
 
 inputs.forEach(function (input, index) {
   input.addEventListener("change", function () {
@@ -164,3 +168,8 @@ prevSlideButton.addEventListener("click", function () {
   handleParagraphs();
   handleSlideButtonDebounce();
 });
+// ======
+
+// YEAR
+const yearElement = document.getElementById("thisYear");
+yearElement.innerText = new Date().getFullYear();
